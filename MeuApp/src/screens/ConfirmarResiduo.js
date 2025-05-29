@@ -2,19 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export default function ConfirmarResiduo() {
+export default function AgendamentoConfirmado() {
   const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Agendamento Confirmado</Text>
 
-      <View style={styles.checkContainer}>
-        <Image
-          source={require('../assets/check.png')} // ícone de check (adicione esse asset ao projeto)
-          style={styles.checkIcon}
-        />
-      </View>
+   
 
       <View style={styles.card}>
         <View style={styles.item}>
@@ -52,23 +47,7 @@ export default function ConfirmarResiduo() {
       </TouchableOpacity>
 
       {/* Menu inferior fixo */}
-      <View style={styles.bottomMenu}>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuTextActive}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Agendar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Mapa</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Denúncia</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Perfil</Text>
-        </TouchableOpacity>
-      </View>
+      
     </SafeAreaView>
   );
 }
